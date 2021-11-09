@@ -5,3 +5,8 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
 bot = ChatBot("Mohammad")
+
+while True:
+    user_message = input("You> ")
+    bot_message = "Bot> ", bot.get_response(user_message)
+    print(bot_message)

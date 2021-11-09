@@ -10,9 +10,9 @@ bot = ChatBot(
     logic_adapters=[
         # Selects a response based on the best known match to a given statement.
         "chatterbot.logic.BestMatch",
-        # Answer questions about the current time.
+        # Answers questions about the present tense.
         "chatterbot.logic.TimeLogicAdapter",
-        # Manage any combination of word and numeric operator for mathematical calculations.
+        # Manages each combination of word and numeric operator for mathematical calculations.
         "chatterbot.logic.MathematicalEvaluation"
     ]
 )

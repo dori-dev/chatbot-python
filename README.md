@@ -12,10 +12,10 @@ Installation requirements.
 pip install -r requirements.txt
 ```
 
-## Simple Chatbot
+## Sample Chatbot
 
 The required files must be downloaded first, so it takes a while.
 
 ```
-python3 simple.py
+python3 sample.py
 ```

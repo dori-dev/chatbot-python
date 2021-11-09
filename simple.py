@@ -4,7 +4,11 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
-bot = ChatBot("Mohammad")  # Bot name is `Mohammad`
+bot = ChatBot(
+    "Mohammad",  # Bot name is `Mohammad`
+    read_only=True  # The bot learns in chat with the user
+)
+
 trainer = ListTrainer(bot)
 trainer.train(
     [
@@ -19,5 +23,5 @@ trainer.train(
 
 while True:
     user_message = input("You> ")
-    bot_message = "Bot>", bot.get_response(user_message)
-    print(bot_message)
+    bot_message = bot.get_response(user_message)
+    print("Bot>", bot_message)

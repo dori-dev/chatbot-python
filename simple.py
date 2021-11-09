@@ -6,7 +6,16 @@ from chatterbot.trainers import ListTrainer
 
 bot = ChatBot("Mohammad")  # Bot name is `Mohammad`
 trainer = ListTrainer(bot)
-trainer.train([])
+trainer.train(
+    [
+        "Hello",
+        "Hi",
+        "How are you?",
+        "I am good. What about you?",
+        "I am fine.",
+        "Do you like apple?"
+    ]
+)
 
 while True:
     user_message = input("You> ")

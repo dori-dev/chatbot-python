@@ -8,9 +8,17 @@ storage_adapter = {
     "database_uri": "sqlite:///dori.db"
 }
 
+logic_adapters = [
+    {
+        "import_path": "chatterbot.logic.BestMatch",
+        "excluded_words": ["Fuck"]
+    }
+]
+
 bot = ChatBot(
     "dori",
-    storage_adapter=storage_adapter
+    storage_adapter=storage_adapter,
+    logic_adapters=logic_adapters,
 )
 
 while True:

@@ -1,2 +1,2 @@
-# chatbot-python
+# Chatbot Python
 Chatbot with python code!

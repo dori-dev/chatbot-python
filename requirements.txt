@@ -1,0 +1,16 @@
+ChatterBot==1.0.0
+chatterbot-corpus==1.2.0
+click==8.0.3
+joblib==1.1.0
+mathparse==0.1.2
+nltk==3.6.5
+packaging==21.2
+Pint==0.18
+pymongo==3.12.1
+pyparsing==2.4.7
+python-dateutil==2.7.5
+PyYAML==3.13
+regex==2021.11.2
+six==1.16.0
+SQLAlchemy==1.2.19
+tqdm==4.62.3

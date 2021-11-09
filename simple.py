@@ -6,7 +6,11 @@ from chatterbot.trainers import ListTrainer
 
 bot = ChatBot(
     "Mohammad",  # Bot name is `Mohammad`
-    read_only=True  # The bot learns in chat with the user
+    read_only=True,  # The bot learns in chat with the user
+    logic_adapters=[
+        "chatterbot.logic.BestMatch",  # To perform simple mathematical operations.
+        "chatterbot.logic.TimeLogicAdapter"  # To work with time.
+    ]
 )
 
 trainer = ListTrainer(bot)

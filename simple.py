@@ -19,5 +19,5 @@ trainer.train(
 
 while True:
     user_message = input("You> ")
-    bot_message = "Bot> ", bot.get_response(user_message)
+    bot_message = "Bot>", bot.get_response(user_message)
     print(bot_message)

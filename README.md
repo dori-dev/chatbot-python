@@ -6,7 +6,7 @@ Chatbot with python!
 
 # How to Run
 
-Installation requirements. \
+Installation requirements.
 
 ```
 pip install -r requirements.txt
@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 ## Simple Chatbot
 
-The required files must be downloaded first, so it takes a while. \
+The required files must be downloaded first, so it takes a while.
 
 ```
 python3 simple.py

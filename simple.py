@@ -8,7 +8,8 @@ bot = ChatBot(
     "Mohammad",  # Bot name is `Mohammad`
     read_only=True,  # The bot learns in chat with the user
     logic_adapters=[
-        "chatterbot.logic.BestMatch",  # To perform simple mathematical operations.
+        # To perform simple mathematical operations.
+        "chatterbot.logic.BestMatch",
         "chatterbot.logic.TimeLogicAdapter"  # To work with time.
     ]
 )

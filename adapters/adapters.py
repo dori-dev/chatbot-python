@@ -3,12 +3,14 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
+storage_adapter = {
+    "import_path": "chatterbot.storage.SQLStorageAdapter",
+    "database_uri": "sqlite:///dori.db"
+}
+
 bot = ChatBot(
     "dori",
-    storage_adapter={
-        "import_path": "chatterbot.storage.SQLStorageAdapter",
-        "database_uri": "sqlite:///dori.db"
-    }
+    storage_adapter=storage_adapter
 )
 
 while True:

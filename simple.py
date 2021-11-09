@@ -4,7 +4,7 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
-bot = ChatBot("Mohammad")
+bot = ChatBot("Mohammad")  # Bot name is `Mohammad`
 
 while True:
     user_message = input("You> ")

@@ -24,3 +24,20 @@ class SimplePersianTimeLogic(LogicAdapter):
                 time = strftime("%H:%M")
                 return Statement(text=f"ساعت {time} است", confidence=1.0)
         return Statement(text="!نمیفهمم", confidence=0.0)
+
+
+bot = ChatBot(
+    "smart",
+    storage_adapter={
+        "import_path": "chatterbot.storage.SQLStorageAdapter",
+        "database_uri": "sqlite:///fa-smart.db"
+    },
+    logic_adapter=[
+        "__main__.SimplePersianTimeLogic"
+    ]
+)
+
+while True:
+    user_message = input("شما: ")
+    bot_message = bot.get_response(user_message)
+    print("بات:", bot_message)

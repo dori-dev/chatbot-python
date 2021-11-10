@@ -3,6 +3,11 @@
 from chatterbot import ChatBot
 # from chatterbot.trainers import ListTrainer
 
+BAD_WORDS = [
+    "fuck",
+    "fucking",
+]
+
 storage_adapter = {
     "import_path": "chatterbot.storage.SQLStorageAdapter",
     "database_uri": "sqlite:///dori.db"
@@ -10,9 +15,7 @@ storage_adapter = {
 
 bestmatch = {
     "import_path": "chatterbot.logic.BestMatch",
-    "excluded_words": [
-        "fuck",
-    ]
+    "excluded_words": BAD_WORDS
 }
 
 timelogic = {
@@ -40,6 +43,21 @@ logic_adapters = [
 ]
 
 
+def check_bot_response(bot_response: str) -> bool:
+    """check the bot response
+
+    Args:
+        bot_response (str): text of bot message
+
+    Returns:
+        bool: True if is valid and False if its not valid
+    """
+    for word in BAD_WORDS:
+        if word in bot_response:
+            return False
+    return True
+
+
 bot = ChatBot(
     "dori",
     storage_adapter=storage_adapter,
@@ -49,7 +67,10 @@ bot = ChatBot(
 while True:
     user_message = input("You> ")
     try:
-        bot_message = bot.get_response(user_message)
+        while True:
+            bot_message = bot.get_response(user_message)
+            if check_bot_response(bot_message.text.lower()):
+                break
     except Exception as error:
         print("Bot>", "I don't understand you!")
     else:

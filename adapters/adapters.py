@@ -2,10 +2,6 @@
 """
 from chatterbot import ChatBot
 
-BAD_WORDS = [
-    "fuck",
-    "fucking",
-]
 
 storage_adapter = {
     "import_path": "chatterbot.storage.SQLStorageAdapter",

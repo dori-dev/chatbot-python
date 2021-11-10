@@ -1,7 +1,7 @@
 """Use adapters in chatterbot
 """
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+# from chatterbot.trainers import ListTrainer
 
 storage_adapter = {
     "import_path": "chatterbot.storage.SQLStorageAdapter",
@@ -11,7 +11,7 @@ storage_adapter = {
 logic_adapters = [
     {
         "import_path": "chatterbot.logic.BestMatch",
-        "excluded_words": ["Fuck"]
+        "excluded_words": ["fuck"]
     }
 ]
 

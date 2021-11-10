@@ -2,4 +2,5 @@ env
 db.sqlite3
 dori.db
 __pycache__
-smart.db
+fa-smart.db
+en-smart.db

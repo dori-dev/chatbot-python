@@ -7,7 +7,7 @@ bot = ChatBot(
     "smart",
     storage_adapter={
         "import_path": "chatterbot.storage.SQLStorageAdapter",
-        "database_uri": "sqlite:///smart.db"
+        "database_uri": "sqlite:///en-smart.db"
     }
 )
 

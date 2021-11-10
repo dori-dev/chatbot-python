@@ -36,7 +36,7 @@ while True:
             bot_message = bot.get_response(user_message)
             if check_bot_response(bot_message.text.lower()):
                 break
-    except Exception as error:
+    except Exception:
         print("Bot>", "I don't understand you!")
     else:
         print("Bot>", bot_message)

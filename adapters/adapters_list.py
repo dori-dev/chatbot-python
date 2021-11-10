@@ -12,12 +12,12 @@ storage_adapter = {
     "database_uri": "sqlite:///dori.db"
 }
 
-bestmatch = {
+best_match = {
     "import_path": "chatterbot.logic.BestMatch",
     "excluded_words": BAD_WORDS
 }
 
-timelogic = {
+time_logic = {
     "import_path": "chatterbot.logic.TimeLogicAdapter",
     "negative": [
         "How are you?",
@@ -35,8 +35,8 @@ specific_response = {
 }
 
 logic_adapters = [
-    bestmatch,
-    timelogic,
+    best_match,
+    time_logic,
     "chatterbot.logic.MathematicalEvaluation",
     specific_response,
 ]

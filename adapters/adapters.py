@@ -7,6 +7,7 @@ from chatterbot import ChatBot
 from adapters_list import logic_adapters, storage_adapter
 from adapters_list import BAD_WORDS
 
+
 def check_bot_response(bot_response: str) -> bool:
     """check the bot response
 

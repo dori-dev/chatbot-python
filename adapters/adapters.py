@@ -11,7 +11,16 @@ storage_adapter = {
 logic_adapters = [
     {
         "import_path": "chatterbot.logic.BestMatch",
-        "excluded_words": ["fuck"]
+        "excluded_words": [
+            "fuck",
+        ]
+    },
+    {
+        "import_path": "chatterbot.logic.TimeLogicAdapter",
+        "negative": [
+            "How are you?",
+            "How old are you?",
+        ]
     }
 ]
 

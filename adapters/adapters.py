@@ -8,20 +8,29 @@ storage_adapter = {
     "database_uri": "sqlite:///dori.db"
 }
 
+bestmatch = {
+    "import_path": "chatterbot.logic.BestMatch",
+    "excluded_words": [
+        "fuck",
+    ]
+}
+
+timelogic = {
+    "import_path": "chatterbot.logic.TimeLogicAdapter",
+    "negative": [
+        "How are you?",
+        "How old are you?",
+        "What is 2 + 2",
+        "What is 4 / 4",
+        "What is 5 plus 5"
+    ]
+}
+
+
 logic_adapters = [
-    {
-        "import_path": "chatterbot.logic.BestMatch",
-        "excluded_words": [
-            "fuck",
-        ]
-    },
-    {
-        "import_path": "chatterbot.logic.TimeLogicAdapter",
-        "negative": [
-            "How are you?",
-            "How old are you?",
-        ]
-    }
+    bestmatch,
+    timelogic,
+    "chatterbot.logic.MathematicalEvaluation",
 ]
 
 bot = ChatBot(
@@ -32,5 +41,9 @@ bot = ChatBot(
 
 while True:
     user_message = input("You> ")
-    bot_message = bot.get_response(user_message)
-    print("Bot>", bot_message)
+    try:
+        bot_message = bot.get_response(user_message)
+    except Exception as error:
+        print("Bot>", "I don't understand you!")
+    else:
+        print("Bot>", bot_message)

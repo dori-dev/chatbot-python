@@ -1,7 +1,6 @@
 """Use adapters in chatterbot
 """
 from chatterbot import ChatBot
-# from chatterbot.trainers import ListTrainer
 
 BAD_WORDS = [
     "fuck",

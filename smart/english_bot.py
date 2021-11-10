@@ -11,4 +11,5 @@ bot = ChatBot(
     }
 )
 
-
+trainer = ChatterBotCorpusTrainer(bot)
+trainer.train("chatterbot.corpus.english")

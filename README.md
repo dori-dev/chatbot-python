@@ -9,13 +9,16 @@ Chatbot with python!
 Installation requirements.
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Sample Chatbot
 
 The required files must be downloaded first, so it takes a while.
 
+```
+cd sample
+```
 ```
 python3 sample.py
 ```

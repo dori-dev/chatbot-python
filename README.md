@@ -19,6 +19,15 @@ The required files must be downloaded first, so it takes a while.
 ```
 cd sample
 ```
+
 ```
 python3 sample.py
+```
+
+## Chatbot Adapters
+
+The list of adapters is inside a adapters_list.py
+
+```
+python3 adapters.py
 ```

@@ -16,25 +16,19 @@ pip3 install -r requirements.txt
 
 The required files must be downloaded first, so it takes a while.
 
-````
+```
 cd sample```
 
-````
-
+```
 python3 sample.py```
 
 ## Chatbot Adapters
 
 The list of adapters is inside a adapters_list.py
 
-````
-
+```
 cd adapters```
 
-````
-
+```
 python3 adapters.py```
 
-```
-
-```

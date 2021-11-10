@@ -26,12 +26,19 @@ timelogic = {
     ]
 }
 
+specific_response = {
+    "import_path": "chatterbot.logic.SpecificResponseAdapter",
+    "input_text": "Wow",
+    "output_text": "Yes :)"
+}
 
 logic_adapters = [
     bestmatch,
     timelogic,
     "chatterbot.logic.MathematicalEvaluation",
+    specific_response,
 ]
+
 
 bot = ChatBot(
     "dori",

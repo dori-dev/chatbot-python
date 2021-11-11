@@ -46,6 +46,7 @@ bot = ChatBot(
 )
 
 trainer = ChatterBotCorpusTrainer(bot)
+# Use chatterbot corpus data to train bot
 trainer.train("chatterbot.corpus.persian")
 
 while True:

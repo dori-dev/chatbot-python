@@ -4,6 +4,7 @@ from time import strftime
 from chatterbot import ChatBot
 from chatterbot.logic import LogicAdapter
 from chatterbot.conversation import Statement
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
 class SimplePersianTimeLogic(LogicAdapter):

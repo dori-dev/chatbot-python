@@ -1,11 +1,18 @@
 """Use adapters in chatterbot
 """
+# Standart library import
+import logging
+
 # Third party import
 from chatterbot import ChatBot
 
 # Local imports
 from adapters_list import logic_adapters, storage_adapter
 from adapters_list import BAD_WORDS
+
+# Fix `No value for search_text was available on the provided input`
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
 
 
 def check_bot_response(bot_response: str) -> bool:

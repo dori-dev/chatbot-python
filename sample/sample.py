@@ -1,8 +1,16 @@
 """Simple ChatBot
 """
+# Standart library import
+import logging
+
 # Third party imports
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+
+# Fix `No value for search_text was available on the provided input`
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
+
 
 bot = ChatBot(
     "Mohammad",  # Bot name is `Mohammad`

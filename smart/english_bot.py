@@ -1,8 +1,16 @@
 """Smart Chatbot(english)
 """
+# Standart library import
+import logging
+
 # Third party imports
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+
+# Fix `No value for search_text was available on the provided input`
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
+
 
 bot = ChatBot(
     "smart",

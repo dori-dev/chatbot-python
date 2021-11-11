@@ -2,12 +2,17 @@
 """
 # Standard library import
 from time import strftime
+import logging
 
 # Local imports
 from chatterbot import ChatBot
 from chatterbot.logic import LogicAdapter
 from chatterbot.conversation import Statement
 from chatterbot.trainers import ChatterBotCorpusTrainer
+
+# Fix `No value for search_text was available on the provided input`
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
 
 
 class SimplePersianTimeLogic(LogicAdapter):

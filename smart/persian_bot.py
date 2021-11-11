@@ -42,11 +42,12 @@ bot = ChatBot(
         "import_path": "chatterbot.storage.SQLStorageAdapter",
         "database_uri": "sqlite:///fa-smart.db"
     },
-    logic_adapter=[
+    logic_adapters=[
         "__main__.SimplePersianTimeLogic",
         "chatterbot.logic.BestMatch"
     ]
 )
+
 trainer = ChatterBotCorpusTrainer(bot)
 trainer.train("chatterbot.corpus.persian")
 

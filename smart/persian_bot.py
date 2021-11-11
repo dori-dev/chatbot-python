@@ -10,14 +10,23 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 class SimplePersianTimeLogic(LogicAdapter):
     """Simple persian time logic
     """
-    positive_words = [
-        "ساعت",
-        "زمان",
-    ]
+    # positive_words = [
+    #     "ساعت",
+    #     "زمان",
+    #     "ساعت چنده",
+    #     "ساعت چند است",
+    #     "زمان را بگو"
+    # ]
 
     def __init__(self, chatbot, **kw):
         super().__init__(chatbot, **kw)
-        self.positive = kw.get("positive", self.positive_words)
+        self.positive = kw.get("positive", [
+            "ساعت",
+            "زمان",
+            "ساعت چند است",
+            "ساعت چنده",
+            "زمان را بگو"
+        ])
 
     def can_process(self, statement):
         for word in self.positive:
@@ -28,6 +37,7 @@ class SimplePersianTimeLogic(LogicAdapter):
     def process(self, statement, additional_response_selection_parameters=None):
         for word in self.positive:
             if word in statement.text:
+                print('*', statement.text, '*')
                 time = strftime("%H:%M")
                 return Statement(text=f"ساعت {time} است", confidence=1.0)
         return Statement(text="!نمیفهمم", confidence=0.0)

@@ -38,6 +38,8 @@ bot = ChatBot(
         "chatterbot.logic.BestMatch"
     ]
 )
+trainer = ChatterBotCorpusTrainer(bot)
+trainer.train("chatterbot.corpus.persian")
 
 while True:
     user_message = input("شما: ")

@@ -19,6 +19,12 @@ class SimplePersianTimeLogic(LogicAdapter):
         super().__init__(chatbot, **kw)
         self.positive = kw.get("positive", self.positive_words)
 
+    def can_process(self, statement):
+        for word in self.positive:
+            if word in statement.text:
+                return True
+        return False
+
     def process(self, statement, additional_response_selection_parameters=None):
         for word in self.positive:
             if word in statement.text:

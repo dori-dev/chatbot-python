@@ -1,6 +1,6 @@
-# Chatbot Python
+# Python Chatbot
 
-### The Chatbot with python!
+### Build a chatbot with Python!
 
 #
 

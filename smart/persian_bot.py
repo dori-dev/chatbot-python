@@ -32,7 +32,6 @@ class SimplePersianTimeLogic(LogicAdapter):
     def process(self, statement, additional_response_selection_parameters=None):
         for word in self.positive:
             if word in statement.text:
-                print('*', statement.text, '*')
                 time = strftime("%H:%M")
                 return Statement(text=f"ساعت {time} است", confidence=1.0)
         return Statement(text="!نمیفهمم", confidence=0.0)

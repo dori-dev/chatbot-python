@@ -1,6 +1,6 @@
 """Smart Chatbot(persian)
 """
-# Standard imports
+# Standard library import
 from time import strftime
 
 # Local imports

@@ -10,13 +10,6 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 class SimplePersianTimeLogic(LogicAdapter):
     """Simple persian time logic
     """
-    # positive_words = [
-    #     "ساعت",
-    #     "زمان",
-    #     "ساعت چنده",
-    #     "ساعت چند است",
-    #     "زمان را بگو"
-    # ]
 
     def __init__(self, chatbot, **kw):
         super().__init__(chatbot, **kw)

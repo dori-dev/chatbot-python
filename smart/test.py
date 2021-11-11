@@ -4,6 +4,8 @@ from chatterbot.logic import LogicAdapter
 from chatterbot.conversation import Statement
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
+# ok
+
 
 class SimplePersianTimeLogic(LogicAdapter):
     def __init__(self, chatbot, **kw):

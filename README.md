@@ -9,7 +9,16 @@ Chatbot with python!
 Installation requirements.
 
 ```
+virtualenv env
+
+```
+
+```
+source env/bin/activate
+```
+
 pip3 install -r requirements.txt
+
 ```
 
 ## Sample Chatbot
@@ -17,11 +26,15 @@ pip3 install -r requirements.txt
 The required files must be downloaded first, so it takes a while.
 
 ```
+
 cd sample
+
 ```
 
 ```
+
 python3 sample.py
+
 ```
 
 ## Chatbot Adapters
@@ -29,9 +42,15 @@ python3 sample.py
 The list of adapters is inside a adapters_list.py
 
 ```
+
 cd adapters
+
 ```
 
 ```
+
 python3 adapters.py
+
+```
+
 ```

@@ -21,12 +21,6 @@ class SimplePersianTimeLogic(LogicAdapter):
             "زمان را بگو"
         ])
 
-    def can_process(self, statement):
-        for word in self.positive:
-            if word in statement.text:
-                return True
-        return False
-
     def process(self, statement, additional_response_selection_parameters=None):
         for word in self.positive:
             if word in statement.text:

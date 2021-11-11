@@ -1,6 +1,9 @@
 """Smart Chatbot(persian)
 """
+# Standard imports
 from time import strftime
+
+# Local imports
 from chatterbot import ChatBot
 from chatterbot.logic import LogicAdapter
 from chatterbot.conversation import Statement

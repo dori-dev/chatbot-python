@@ -17,6 +17,7 @@ virtualenv env
 source env/bin/activate
 ```
 
+```
 pip3 install -r requirements.txt
 
 ```
@@ -60,9 +61,15 @@ python3 adapters.py
 Includes two codes, persian bot and english bot
 
 ```
+
 python3 english_bot.py
+
 ```
 
 ```
+
 python3 persian_bot.py
+
+```
+
 ```

@@ -33,7 +33,8 @@ bot = ChatBot(
         "database_uri": "sqlite:///fa-smart.db"
     },
     logic_adapter=[
-        "__main__.SimplePersianTimeLogic"
+        "__main__.SimplePersianTimeLogic",
+        "chatterbot.logic.BestMatch"
     ]
 )
 

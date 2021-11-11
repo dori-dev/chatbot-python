@@ -54,3 +54,15 @@ python3 adapters.py
 ```
 
 ```
+
+## Smart Chatbot
+
+Includes two codes, persian bot and english bot
+
+```
+python3 english_bot.py
+```
+
+```
+python3 persian_bot.py
+```
